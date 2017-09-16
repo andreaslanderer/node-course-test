@@ -32,6 +32,14 @@ app.get('/', (req, res) => {
   });
 });
 
+app.get('/projects', (req, res) => {
+  res.render('projects', {
+    title: 'Projects',
+    header: 'Project Portfolio',
+    message: 'This site contains an overview of all my projects.'
+  });
+});
+
 app.listen(port, () => {
   console.log(`Server successfully started at port ${port}!`);
 });
